@@ -1,0 +1,7 @@
+{
+  "name": "Kiact-application",
+  "version": "1.0.0",
+  "devDependencies": {
+    "vite": "^6.2.1"
+  }
+}
