@@ -1,8 +1,12 @@
 {
-  "name": "kiact",
+  "name": "Kiact",
+  "version": "1.0.0",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "app"
   ],
-  "packageManager": "yarn@4.5.2"
+  "description": "Build my own React",
+  "main": "index.js",
+  "license": "MIT"
 }
