@@ -6,6 +6,6 @@ export interface KiactElementType<P = any, T = any> {
   key: string | number | null;
 
   // A ref object or callback for referencing DOM elements or component instances.
-  ref: ((instance: unknown) => void) | null | {current: unknown} | null;
+  ref: (() => void) | null | {current: unknown} | null;
   $$typeof: symbol;
 }

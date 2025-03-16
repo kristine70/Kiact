@@ -22,7 +22,7 @@ export function createElement(type, config, ...children) {
   // apply default props to the KiactElement
   if (type && type.defaultProps) {
     const defaultProps = type.defaultProps;
-    for (propName in defaultProps) {
+    for (const propName in defaultProps) {
       if (props[propName] === undefined)
         props[propName] = defaultProps[propName];
     }

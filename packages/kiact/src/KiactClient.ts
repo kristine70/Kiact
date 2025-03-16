@@ -1,3 +1,3 @@
-import {createElement} from './JSXElement';
+import {createElement} from './createElement';
 
 export {createElement};
