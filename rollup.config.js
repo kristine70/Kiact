@@ -16,6 +16,6 @@ export default defineConfig({
     warn(warning);
   },
   watch: {
-    include: ['packages/**','app/src/**'],
+    include: ['packages/**', 'app/src/**'],
   },
 });

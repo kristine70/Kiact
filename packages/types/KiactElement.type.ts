@@ -1,11 +1,10 @@
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export interface KiactElementType<P = any, T = any> {
+export interface KiactElementType<P, T> {
   /** type is flexible — it can be a string, function, class, or special React object.*/
   type: T;
   props: P;
   key: string | number | null;
 
-  // A ref object or callback for referencing DOM elements or component instances.
+  /** A ref object or callback for referencing DOM elements or component instances.*/
   ref: (() => void) | null | {current: unknown} | null;
   $$typeof: symbol;
 }
