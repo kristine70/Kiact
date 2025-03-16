@@ -15,7 +15,8 @@ function KiactElement(type: any, key: k, props: any): KiactElementType {
   return element;
 }
 
-export function createElement(type, config, ...children) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function createElement(type: any, config: any, ...children: any[]) {
   const props = {...config, children};
   const key = config.key === null ? null : String(config.key);
 

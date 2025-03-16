@@ -1,4 +1,4 @@
-export {
+import {
   // Children,
   // Component,
   // Fragment,
@@ -37,3 +37,5 @@ export {
   // useActionState,
   // version,
 } from './src/KiactClient';
+
+export default {createElement};
