@@ -3,7 +3,7 @@ import {terser} from 'rollup-plugin-terser';
 import {defineConfig} from 'rollup';
 
 export default defineConfig({
-  input: 'packages/kiact/index.ts',
+  input: 'packages/index.ts',
   output: [
     {
       file: 'app/kiact-library/index.js',

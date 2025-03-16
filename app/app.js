@@ -1,3 +1,5 @@
 import Kiact from './kiact-library';
 
-Kiact.createElement('div', {id: 'app'}, 'Hello Kiact!');
+Kiact.createRoot(document.getElementById('app')).render(
+  Kiact.createElement('div', {id: 'app'}, 'Hello Kiact!'),
+);
