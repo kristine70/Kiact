@@ -5,7 +5,7 @@ import tseslint from 'typescript-eslint';
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {languageOptions: {globals: globals.browser}},
-  {ignores: ['dist']},
+  {ignores: ['app/kiact-library']},
   ...tseslint.configs.recommended,
   pluginJs.configs.recommended,
 ];
