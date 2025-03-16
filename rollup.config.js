@@ -15,4 +15,7 @@ export default defineConfig({
     if (warning.plugin === 'typescript') return;
     warn(warning);
   },
+  watch: {
+    include: ['packages/**','app/src/**'],
+  },
 });
