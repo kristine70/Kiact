@@ -11,4 +11,8 @@ export default defineConfig({
     },
   ],
   plugins: [typescript(), terser()],
+  onwarn(warning, warn) {
+    if (warning.plugin === 'typescript') return;
+    warn(warning);
+  },
 });

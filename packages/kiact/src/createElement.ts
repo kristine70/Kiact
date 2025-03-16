@@ -2,8 +2,7 @@ import {KiactElementType} from '@types';
 type k = string | number | null;
 const REACT_ELEMENT_TYPE: symbol = Symbol.for('react.transitional.element');
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function KiactElement(type: any, key: k, props: any): KiactElementType {
+function KiactElement(type, key: k, props): KiactElementType {
   const element: KiactElementType = {
     $$typeof: REACT_ELEMENT_TYPE,
     type,
@@ -15,8 +14,7 @@ function KiactElement(type: any, key: k, props: any): KiactElementType {
   return element;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function createElement(type: any, config: any, ...children: any[]) {
+export function createElement(type, config, ...children) {
   const props = {...config, children};
   const key = config.key === null ? null : String(config.key);
 
