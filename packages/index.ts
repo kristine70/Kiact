@@ -1,4 +1,4 @@
-import {createElement} from './kiact/src/createElement';
-import {createRoot} from './kiact-dom/src/client/KiactDOMRoot';
+import kiact from './kiact';
+import kiactDOM from './kiact-dom';
 
-export default {createElement, createRoot};
+export default {...kiact, ...kiactDOM};

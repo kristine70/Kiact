@@ -1,3 +1,3 @@
-import {createElement} from './createElement';
+import {createElement} from './jsx/createElement';
 
-export {createElement};
+export default {createElement};

@@ -1,4 +1,5 @@
 import {KiactElementType} from '@types';
+
 type k = string | number | null;
 const REACT_ELEMENT_TYPE: symbol = Symbol.for('react.transitional.element');
 

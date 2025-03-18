@@ -1,3 +1,3 @@
-import {createRoot} from './ReactDOMRoot';
+import {createRoot} from './KiactDOMRoot';
 
-export {createRoot};
+export default {createRoot};
