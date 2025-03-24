@@ -1,0 +1,6 @@
+{
+  "name": "kiact-dom",
+  "version": "1.0.0",
+  "description": "A package for Kiact DOM manipulation",
+  "main": "index.js"
+}

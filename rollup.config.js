@@ -1,16 +1,29 @@
 import typescript from '@rollup/plugin-typescript';
-import {terser} from 'rollup-plugin-terser';
+import terser from '@rollup/plugin-terser';
 import {defineConfig} from 'rollup';
+import copy from 'rollup-plugin-copy';
 
 export default defineConfig({
-  input: 'packages/index.ts',
+  input: {
+    'kiact/index': 'packages/kiact/index.ts',
+    'kiact-dom/index': 'packages/kiact-dom/index.ts',
+  },
   output: [
     {
-      file: 'app/kiact-library/index.js',
+      dir: 'build',
       format: 'es',
     },
   ],
-  plugins: [typescript(), terser()],
+  plugins: [
+    typescript(),
+    terser(),
+    copy({
+      targets: [
+        {src: 'packages/kiact/package.json', dest: 'build/kiact'},
+        {src: 'packages/kiact-dom/package.json', dest: 'build/kiact-dom'},
+      ],
+    }),
+  ],
   onwarn(warning, warn) {
     if (warning.plugin === 'typescript') return;
     warn(warning);
