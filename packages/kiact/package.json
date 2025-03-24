@@ -1,5 +1,15 @@
 {
   "name": "kiact",
   "version": "1.0.0",
-  "main": "index.js"
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "jsx-runtime.js"
+  ],
+  "exports": {
+    "./jsx-runtime": {
+      "react-server": "./jsx-runtime.js",
+      "default": "./jsx-runtime.js"
+    }
+  }
 }

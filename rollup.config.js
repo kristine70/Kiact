@@ -7,6 +7,7 @@ export default defineConfig({
   input: {
     'kiact/index': 'packages/kiact/index.ts',
     'kiact-dom/index': 'packages/kiact-dom/index.ts',
+    'kiact/jsx-runtime': 'packages/kiact/src/jsx/jsx-runtime.ts',
   },
   output: [
     {
