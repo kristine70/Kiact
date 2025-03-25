@@ -23,5 +23,6 @@ chrome-user-data
 .vscode
 *.swp
 *.swo
+dist
 
 app/kiact-library

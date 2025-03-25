@@ -1,11 +1,18 @@
-import globals from 'globals';
-import pluginJs from '@eslint/js';
-import tseslint from 'typescript-eslint';
+import ts from 'typescript-eslint';
 
-/** @type {import('eslint').Linter.Config[]} */
-export default [
-  {languageOptions: {globals: globals.browser}},
-  {ignores: ['app/kiact-library']},
-  ...tseslint.configs.recommended,
-  pluginJs.configs.recommended,
-];
+export default ts.config(
+  {ignores: ['dist']},
+  ts.configs.strictTypeChecked,
+  ts.configs.stylisticTypeChecked,
+  {
+    languageOptions: {
+      parserOptions: {
+        projectService: {
+          allowDefaultProject: ['*.js', '*.mjs'],
+          defaultProject: 'tsconfig.json',
+        },
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
+);
