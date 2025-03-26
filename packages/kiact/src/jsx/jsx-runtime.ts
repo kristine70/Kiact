@@ -1,5 +1,9 @@
 import {createElement} from './createElement';
 
-export function jsxs(type, config, ...maybeKey) {
-  return createElement(type, config, ...maybeKey);
+export function jsxs(
+  type: Record<string, unknown>,
+  config: Record<string, unknown>,
+  ...children: unknown[]
+) {
+  return createElement(type, config, ...children);
 }

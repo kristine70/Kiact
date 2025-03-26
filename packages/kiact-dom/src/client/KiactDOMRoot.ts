@@ -1,13 +1,15 @@
-export function createRoot(container) {
+import {KiactElementType} from '@types';
+
+export function createRoot(container: HTMLElement) {
   return {
-    render(element) {
+    render(element: KiactElementType) {
       container.innerHTML = '';
       render(element, container);
     },
   };
 }
 
-function render(element, container) {
+function render(element: KiactElementType, container: HTMLElement) {
   if (typeof element === 'string' || typeof element === 'number') {
     container.appendChild(document.createTextNode(element));
     return;
@@ -23,6 +25,10 @@ function render(element, container) {
       });
   }
 
-  element.props.children.forEach(child => render(child, dom));
+  if (Array.isArray(element.props?.children)) {
+    element.props.children.forEach((child: KiactElementType) => {
+      render(child, dom);
+    });
+  }
   container.appendChild(dom);
 }

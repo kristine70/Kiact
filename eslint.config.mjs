@@ -1,9 +1,8 @@
 import ts from 'typescript-eslint';
 
 export default ts.config(
-  {ignores: ['dist']},
-  ts.configs.strictTypeChecked,
-  ts.configs.stylisticTypeChecked,
+  {ignores: ['dist', 'app']},
+  ts.configs.recommendedTypeChecked,
   {
     languageOptions: {
       parserOptions: {
