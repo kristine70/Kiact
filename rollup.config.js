@@ -7,9 +7,9 @@ import dts from 'rollup-plugin-dts';
 export default defineConfig({
   input: {
     'kiact/index': 'packages/kiact/index.ts',
-    'kiact/index.d.ts': 'dist/kiact/index.d.ts',
+    'kiact/index.d.ts': 'dist/packages/kiact/index.d.ts',
     'kiact-dom/index': 'packages/kiact-dom/index.ts',
-    'kiact-dom/index.d.ts': 'dist/kiact-dom/index.d.ts',
+    'kiact-dom/index.d.ts': 'dist/packages/kiact-dom/index.d.ts',
     'kiact/jsx-runtime': 'packages/kiact/src/jsx/jsx-runtime.ts',
   },
   output: [

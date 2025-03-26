@@ -1,12 +1,4 @@
-export type JSXElementConstructor<P> =
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  | ((props: P) => KiactElementType<any, any> | null)
-  | (new (props: P) => Component<P>);
-
-export interface KiactElementType<
-  P = Record<string, unknown>,
-  T extends string | JSXElementConstructor<unknown> = string,
-> {
+export interface KiactElementType<T, P> {
   /** type is flexible — it can be a string, function, class, or special React object.*/
   type: T;
   props: P;

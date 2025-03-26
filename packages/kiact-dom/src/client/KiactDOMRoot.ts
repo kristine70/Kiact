@@ -21,7 +21,7 @@ function render(element: KiactElementType, container: HTMLElement) {
     Object.keys(element.props)
       .filter(key => key !== 'children')
       .forEach(name => {
-        dom[name] = element.props[name];
+        dom.setAttribute(name, element.props[name]);
       });
   }
 

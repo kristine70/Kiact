@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "lint": "yarn prettier --write . --log-level warn && yarn eslint .",
-    "build": "yarn lint && yarn rollup -c",
+    "build": "yarn lint && npx tsc && yarn rollup -c",
     "dev": "yarn rollup -c -w"
   },
   "devDependencies": {
